@@ -1,10 +1,6 @@
 # CYK-algorithm---Python3-implementation
 
-In computer science, the Cocke–Younger–Kasami algorithm (alternatively called CYK, or CKY) is a parsing algorithm for context-free grammars, named after its inventors, John Cocke, Daniel Younger and Tadao Kasami. It employs bottom-up parsing and dynamic programming.
-
-The standard version of CYK operates only on context-free grammars given in Chomsky normal form (CNF). However any context-free grammar may be transformed to a CNF grammar expressing the same language (Sipser 1997).
-
-The importance of the CYK algorithm stems from its high efficiency in certain situations. Using Landau symbols, the worst case running time of CYK is Ο {\displaystyle (n^{3}\cdot |G|)} {\displaystyle (n^{3}\cdot |G|)}, where n is the length of the parsed string and |G| is the size of the CNF grammar G (Hopcroft & Ullman 1979, p. 140). This makes it one of the most efficient parsing algorithms in terms of worst-case asymptotic complexity, although other algorithms exist with better average running time in many practical scenarios.
+https://en.wikipedia.org/wiki/CYK_algorithm
 
 Input format:
 In the first line enter the number of rules and the enter the rules (A -> a)
