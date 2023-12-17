@@ -1,46 +1,42 @@
-# CYK-algorithm---Python3-implementation
+# CYK Algorithm Implementation
+This project implements the Cocke-Younger-Kasami (CYK) algorithm for parsing context-free grammars in Python.
 
-https://en.wikipedia.org/wiki/CYK_algorithm
+## Description
+The CYK algorithm is a bottom-up parsing algorithm that can check if a given string can be generated from a context-free grammar. It employs dynamic programming to efficiently parse the input.
 
-Input format:
-In the first line enter the number of rules and the enter the rules (A -> a)
-Terminal nodes : lowwer case
-Non-terminal nodes : upper case
+This implementation takes as input:
+- The number of grammar rules
+- The grammar rules in the format "A -> BC" 
+- An input string
 
-Example input 1: <br/>
-5 <br/>
-S -> AB <br/>
-A -> BB <br/>
-A -> a <br/>
-B -> AB <br/>
-B -> b <br/>
-aabbb <br/>
+It outputs whether the string can be generated from the grammar using the CYK algorithm. If so, it prints the parse in a table showing which grammar rules could generate substrings.
 
-Example output 1: <br/>
-YES <br/>
-a : [A] , a : [A] , b : [B] , b : [B] , b : [B] <br/>
-aa : [] , ab : [B,S] , bb : [A] , bb : [A] <br/>
-aab : [B,S] , abb : [A] , bbb : [B,S] <br/>
-aabb : [A] , abbb : [B,S] <br/>
-aabbb : [B,S] <br/>
+## Input Format
+- First line: Number of grammar rules
+- Following lines: Grammar rules (A -> BC)
+    - Terminals: Lowercase letters
+    - Non-terminals: Uppercase letters
+- Last line: Input string
 
-Example input 2:<br/>
-3<br/>
-S -> ABB<br/>
-A -> BB<br/>
-B -> a<br/>
-aa<br/>
+## Output Format
+If the input string can be parsed by the grammar rules using CYK:
+- YES
+- Table showing the grammar rules that can generate substrings
 
-Exmple output 2:<br/>
-Wrong Grammar<br/>
+If the input cannot be parsed:
+- NO
 
-Example input 3:<br/>
-4<br/>
-S -> AB<br/>
-A -> a<br/>
-B -> AB<br/>
-B -> b<br/>
-bababa<br/>
+## Example Usage
+See the examples provided in [examples.md](examples.md)
 
-Example output 3:<br/>
-NO<br/>
+## Dependencies
+- Python 3
+
+## Credits
+CYK algorithm by:
+- John Cocke 
+- Daniel Younger  
+- Tadao Kasami
+
+Implementation by:
+- Seyyed Ali Ayati
